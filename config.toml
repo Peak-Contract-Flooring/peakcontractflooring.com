@@ -1,0 +1,60 @@
+baseURL = "https://www.peakcontractflooring.com/"
+languageCode = "en-us"
+title = "Peak Contract Flooring"
+theme = "hugo-hero-theme"
+
+[module]
+  [module.hugoVersion]
+    extended = true
+    min = "0.92.0"
+
+[params]
+  google_analytics_id=""
+
+  [params.logo]
+    mobile = "images/logo.png"
+    mobile_height = "40px"
+    mobile_width = "40px"
+    desktop = "images/logo.png"
+    desktop_height = "52px"
+    desktop_width = "52px"
+    alt = "Peak Contract Flooring, LLC"
+
+  [params.homepage_meta_tags]
+    meta_description = "Peak Contract Flooring, LLC is a commercial and residential flooring contractor in Atlanta, GA. Hardwood, LVP, tile, and carpet — installed by our own crew."
+    meta_og_title = "Peak Contract Flooring"
+    meta_og_type = "website"
+    meta_og_url = "https://www.peakcontractflooring.com"
+    meta_og_image = "https://www.peakcontractflooring.com/images/logo.png"
+    meta_og_description = "Commercial and residential flooring installation in Atlanta, GA. Hardwood, LVP, tile, and carpet — installed by our own crew."
+    meta_twitter_card = "summary"
+    meta_twitter_site = ""
+    meta_twitter_creator = ""
+
+[[menu.main]]
+    name = "Projects"
+    url = "/projects/"
+    weight = 1
+
+[[menu.main]]
+    name = "Gallery"
+    url = "/gallery/"
+    weight = 2
+
+[[menu.main]]
+    name = "Services"
+    url = "/services/"
+    weight = 3
+
+[[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 4
+
+[[menu.main]]
+    name = "Contact"
+    url = "/contact/"
+    weight = 5
+
+[permalinks]
+  pages = "/:filename/"

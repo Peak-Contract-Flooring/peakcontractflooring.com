@@ -1,0 +1,43 @@
+{{ define "header_css" }}{{ end }}
+{{ define "body_classes" }}page-gallery-list{{ end }}
+{{ define "header_classes" }}{{ end }}
+
+{{ define "main" }}
+
+{{ partial "hero-image-setheight.html" (dict "background" .Params.heroBackground "heading" .Params.heroHeading "subheading" .Params.heroSubHeading "content" .)}}
+{{ if .Content }}
+<div class="container pt-6 pt-md-10">
+  <div class="row">
+    <div class="col-12">
+      <div class="page-intro">
+        {{ .Content }}
+      </div>
+    </div>
+  </div>
+</div>
+{{ end }}
+
+<div class="container pb-6 pt-6 pb-md-10 pt-md-10">
+  <div class="row">
+    <div class="col-12">
+      <div class="gallery-masonry">
+        {{ range sort (where .Site.RegularPages "Section" "projects") ".Params.weight" }}
+        {{ $project := . }}
+        {{ with .Params.thumbnail }}
+        <a class="gallery-item" href="{{ $project.RelPermalink }}">
+          <img src="{{ . | relURL }}" alt="{{ $project.Title }}" loading="lazy" />
+          <span class="gallery-caption">{{ $project.Title }}</span>
+        </a>
+        {{ end }}
+        {{ range .Params.images }}
+        <a class="gallery-item" href="{{ $project.RelPermalink }}">
+          <img src="{{ . | relURL }}" alt="{{ $project.Title }}" loading="lazy" />
+          <span class="gallery-caption">{{ $project.Title }}</span>
+        </a>
+        {{ end }}
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</div>
+{{ end }}

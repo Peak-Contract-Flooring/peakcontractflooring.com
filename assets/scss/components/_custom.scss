@@ -1,0 +1,84 @@
+// Peak Contract Flooring — brand customizations on top of the Hero theme.
+
+// Gold accent on hero section label and scroll arrow hover
+.hero-image {
+  .hero-section {
+    color: $brand-gold;
+  }
+}
+
+// The theme blends hero photos with $primary (overlay), which turns real
+// photos solid burgundy. Darken neutrally instead so photos stay readable
+// behind white hero text.
+.hero-image {
+  background-blend-mode: multiply;
+  background-color: #8a8a8a;
+}
+
+// Gallery photo wall (Pacific Hardwood-style masonry)
+.page-gallery-list {
+  .gallery-masonry {
+    column-count: 3;
+    column-gap: 12px;
+
+    @include media-breakpoint-down(md) {
+      column-count: 2;
+    }
+    @include media-breakpoint-down(sm) {
+      column-count: 1;
+    }
+  }
+
+  .gallery-item {
+    display: block;
+    position: relative;
+    margin: 0 0 12px;
+    break-inside: avoid;
+    overflow: hidden;
+    background-color: $brand-black;
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .gallery-caption {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding: 30px 12px 10px;
+      color: $white;
+      font-size: 0.85rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      background: linear-gradient(transparent, rgba(26, 25, 21, 0.85));
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    &:hover img {
+      transform: scale(1.04);
+      opacity: 0.92;
+    }
+    &:hover .gallery-caption {
+      opacity: 1;
+    }
+  }
+}
+
+// Round logo renders cleanly at header size
+.logo img,
+.logo-mobile img {
+  border-radius: 50%;
+}
+
+// The theme fixes .logo at 120px, which overflows the 60px header bar;
+// size it to fit the round badge instead.
+.logo {
+  @include media-breakpoint-up(sm) {
+    width: 48px;
+  }
+}
