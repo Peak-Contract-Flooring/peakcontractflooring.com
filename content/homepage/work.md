@@ -1,7 +1,7 @@
 ---
 title: 'Floors That Hold Up'
 weight: 1
-background: 'images/examples/EXAMPLE-office-01.jpg'
+background: 'images/examples/EXAMPLE-livingroom-02.jpg'
 button: 'See Our Projects'
 buttonLink: 'projects'
 ---

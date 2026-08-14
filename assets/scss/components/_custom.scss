@@ -13,12 +13,22 @@
 .hero-image {
   background-blend-mode: multiply;
   background-color: #8a8a8a;
+  // Anchor crops to the bottom of the photo so the floor — the product —
+  // stays in frame at any viewport size.
+  background-position: center bottom;
 }
 
-// Sub-page banner heroes crop the photo to a short band; anchor to the
-// bottom of the image so the crop lands on the floor, not the ceiling.
-.hero-image-setheight {
-  background-position: center bottom;
+// Homepage photo strip: the theme sets bg-overlay with no background-color
+// (so the photo renders untinted) and puts dark text on it. Darken the
+// photo and use light text instead. bg-primary strips keep their solid color.
+.page-home .strip:not(.bg-primary) {
+  background-blend-mode: multiply;
+  background-color: #666666;
+  color: $white;
+
+  h2.text-primary {
+    color: $brand-gold !important;
+  }
 }
 
 // Gallery photo wall (Pacific Hardwood-style masonry)
