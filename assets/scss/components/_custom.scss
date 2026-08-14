@@ -15,6 +15,12 @@
   background-color: #8a8a8a;
 }
 
+// Sub-page banner heroes crop the photo to a short band; anchor to the
+// bottom of the image so the crop lands on the floor, not the ceiling.
+.hero-image-setheight {
+  background-position: center bottom;
+}
+
 // Gallery photo wall (Pacific Hardwood-style masonry)
 .page-gallery-list {
   .gallery-masonry {

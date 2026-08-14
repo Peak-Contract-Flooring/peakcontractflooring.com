@@ -9,7 +9,7 @@ attribution below if any are ever kept in production (don't keep them).
 
 | file | title | creator | license | source |
 |---|---|---|---|---|
-| EXAMPLE-hero.jpg | Living B, v0 | aforero | CC by | https://www.flickr.com/photos/88824995@N00/2107624813 |
+| EXAMPLE-hero.jpg | Empty apartment room with corner windows | aismallard | CC by-sa | https://commons.wikimedia.org/w/index.php?curid=116250131 |
 | EXAMPLE-office-01.jpg | FLOR in the studio | juhansonin | CC by | https://www.flickr.com/photos/38869431@N00/11256925826 |
 | EXAMPLE-office-02.jpg | Office: Carpet Installation | emily @ go haus go | CC by | https://www.flickr.com/photos/60849758@N05/8442520791 |
 | EXAMPLE-office-03.jpg | BAKOKO CDS 2F Window Bench | BAKOKO | CC by-nd | https://www.flickr.com/photos/77591562@N04/8269956734 |
